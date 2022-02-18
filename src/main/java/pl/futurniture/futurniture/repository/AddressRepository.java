@@ -5,11 +5,10 @@ import pl.futurniture.futurniture.model.Address;
 import pl.futurniture.futurniture.model.AddressType;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface AddressRepository extends JpaRepository<Address, Long> {
 
-    List<Address> findAllByAddressType(AddressType addressType);
+    List<Address> findAllByAddressTypeAndCustomerId(AddressType addressType, Long id);
 
     List<Address> findAllByCustomerId(Long id);
 }

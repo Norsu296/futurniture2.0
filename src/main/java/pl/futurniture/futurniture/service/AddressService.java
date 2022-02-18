@@ -5,11 +5,12 @@ import pl.futurniture.futurniture.model.AddressType;
 
 import java.util.List;
 
+
 public interface AddressService {
 
     Address findById(Long id);
 
-    List<Address> findByType(AddressType addressType);
+    List<Address> findByTypeAndCustomerId(AddressType addressType, Long id);
 
     List<Address> findByCustomerId(Long id);
 

@@ -1,11 +1,13 @@
 package pl.futurniture.futurniture.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
+@Builder
 @Data
+@AllArgsConstructor
 @Table(name = "addresses")
 public class Address {
 
@@ -20,6 +22,5 @@ public class Address {
     private AddressType addressType;
     @ManyToOne
     private Customer customer;
-
 
 }

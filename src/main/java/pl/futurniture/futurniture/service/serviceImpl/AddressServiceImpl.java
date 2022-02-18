@@ -24,8 +24,8 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public List<Address> findByType(AddressType addressType) {
-        return addressRepository.findAllByAddressType(addressType);
+    public List<Address> findByTypeAndCustomerId(AddressType addressType, Long id) {
+        return addressRepository.findAllByAddressTypeAndCustomerId(addressType, id);
     }
 
     @Override
