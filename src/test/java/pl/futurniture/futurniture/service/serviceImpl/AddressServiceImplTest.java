@@ -34,7 +34,7 @@ class AddressServiceImplTest {
     @BeforeEach
     void prepareDb() {
         ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator(false, false,
-                "UTF-8", new ClassPathResource("addresses.sql"));
+                "UTF-8", new ClassPathResource("data.sql"));
         resourceDatabasePopulator.execute(dataSource);
     }
 

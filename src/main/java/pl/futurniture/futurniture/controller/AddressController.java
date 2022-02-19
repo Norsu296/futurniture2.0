@@ -10,7 +10,7 @@ import pl.futurniture.futurniture.service.AddressService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/address")
+@RequestMapping("/addresses")
 @RequiredArgsConstructor
 public class AddressController {
 
