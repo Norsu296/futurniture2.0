@@ -69,7 +69,7 @@ class AddressServiceImplTest {
                 .addressType(AddressType.MAILING)
                 .build();
         //when
-        Address address = addressRepository.save(addressToSave);
+        Address address = addressService.create(addressToSave);
         //then
         assertNotNull(address);
         assertInstanceOf(Address.class, address);

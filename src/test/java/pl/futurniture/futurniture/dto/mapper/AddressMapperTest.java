@@ -30,10 +30,19 @@ class AddressMapperTest {
                 .postCode("30-100")
                 .addressType(AddressType.MAILING)
                 .build();
+        Address addressToCheck = Address.builder()
+                .id(1L)
+                .city("Kraków")
+                .street("Krakowska")
+                .houseNumber("12")
+                .postCode("30-100")
+                .addressType(AddressType.MAILING)
+                .build();
         //when
         Address address = addressMapper.toAddress(addressDTO);
         //then
         assertNotNull(address);
+        assertEquals(addressToCheck,address);
         assertInstanceOf(Address.class, address);
     }
 
