@@ -30,8 +30,18 @@ public class AddressController {
     }
 
     @GetMapping("/find-by-customer/{customerId}")
-    public List<AddressDTO> findByCustomerId(@RequestParam Long customerId) {
+    public List<AddressDTO> findByCustomerId(@PathVariable Long customerId) {
         return addressMapper.toAddressDTOs(addressService.findByCustomerId(customerId));
+    }
+
+    @PutMapping("/{id}")
+    public AddressDTO editById(@PathVariable Long id, @RequestBody AddressDTO addressDTO){
+        return addressMapper.toAddressDTO(addressService.edit(id, addressMapper.toAddress(addressDTO)));
+    }
+
+    @PostMapping
+    public AddressDTO create(@RequestBody AddressDTO addressDTO){
+        return addressMapper.toAddressDTO(addressService.create(addressMapper.toAddress(addressDTO)));
     }
 
 }
