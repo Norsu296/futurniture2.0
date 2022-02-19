@@ -1,3 +1,4 @@
+--Addresses
 INSERT INTO addresses(id, address_type, city, house_number, post_code, street)
     VALUES (1, 'MAILING', 'Kraków', '23', '32-100', 'Kalwaryjska');
 INSERT INTO addresses(id, address_type, city, house_number, post_code, street)
@@ -8,3 +9,10 @@ INSERT INTO addresses(id, address_type, city, house_number, post_code, street)
     VALUES (4, 'RESIDENCE', 'Wrocław', '89/12', '40-115', 'Wadowicka');
 INSERT INTO addresses(id, address_type, city, house_number, post_code, street)
     VALUES (5, 'MAILING', 'Kraków', '2', '30-100', 'Rondo Mateczne');
+--Categories
+INSERT INTO categories(id, name)
+    VALUES (1, 'Fotele');
+INSERT INTO categories(id, name)
+    VALUES (2, 'Kanapy');
+INSERT INTO categories(id, name)
+    VALUES (3, 'Stoły');

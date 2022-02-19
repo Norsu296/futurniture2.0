@@ -38,11 +38,6 @@ class AddressServiceImplTest {
         resourceDatabasePopulator.execute(dataSource);
     }
 
-    @AfterEach
-    void tearDown() {
-        JdbcTestUtils.deleteFromTables(jdbcTemplate, "addresses");
-    }
-
     @Test
     void shouldReturnAddressById() {
         //when
