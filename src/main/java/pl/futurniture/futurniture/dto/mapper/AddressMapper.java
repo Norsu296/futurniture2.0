@@ -21,7 +21,7 @@ public class AddressMapper {
                 .build();
     }
 
-    public Address toAddressDTO(AddressDTO addressDTO) {
+    public Address toAddress(AddressDTO addressDTO) {
         return Address.builder()
                 .id(addressDTO.getId())
                 .city(addressDTO.getCity())
@@ -48,7 +48,7 @@ public class AddressMapper {
         return addressDTOS;
     }
 
-    public List<Address> toAddress(List<AddressDTO> addressDTOS) {
+    public List<Address> toAddresses(List<AddressDTO> addressDTOS) {
         List<Address> addresses = new ArrayList<>();
         for (AddressDTO addressDTO : addressDTOS) {
             addresses.add(
