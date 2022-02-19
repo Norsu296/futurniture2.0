@@ -45,4 +45,9 @@ public class AddressServiceImpl implements AddressService {
                     return addressRepository.save(addressFromDb);
                 }).orElseThrow(() -> new NotFoundException(ErrorMessage.NOT_FOUND));
     }
+
+    @Override
+    public Address create(Address address) {
+        return addressRepository.save(address);
+    }
 }

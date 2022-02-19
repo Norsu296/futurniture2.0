@@ -16,5 +16,7 @@ public interface AddressService {
 
     Address edit(Long id, Address address);
 
+    Address create(Address address);
+
 
 }

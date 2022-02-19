@@ -23,4 +23,7 @@ public class Address {
     @ManyToOne
     private Customer customer;
 
+    public Address() {
+
+    }
 }

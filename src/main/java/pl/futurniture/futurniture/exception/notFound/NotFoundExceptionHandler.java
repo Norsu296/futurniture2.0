@@ -10,9 +10,9 @@ import pl.futurniture.futurniture.exception.ErrorMessage;
 public class NotFoundExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<String> handleException(NotFoundException e){
+    public ResponseEntity<String> handleException(){
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
-                .body(e.getMessage());
+                .body(ErrorMessage.NOT_FOUND.getMessage());
     }
 }
