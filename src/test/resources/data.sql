@@ -16,3 +16,10 @@ INSERT INTO categories(id, name)
     VALUES (2, 'Kanapy');
 INSERT INTO categories(id, name)
     VALUES (3, 'Stoły');
+--Products
+INSERT INTO products(id, name, description, category_id)
+    VALUES(1, 'Uszak', 'Opis produktu', 1);
+INSERT INTO products(id, name, description, category_id)
+    VALUES(2, 'Viking', 'Opis produktu drugiego', 1);
+INSERT INTO products(id, name, description, category_id)
+    VALUES(3, 'MB-01', 'Opis produktu trzeciego', 2);
