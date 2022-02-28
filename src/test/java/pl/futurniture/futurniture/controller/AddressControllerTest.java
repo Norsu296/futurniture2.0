@@ -109,4 +109,7 @@ class AddressControllerTest {
 
     }
 
+    //TODO
+    //notfound exceptions, test finding client
+
 }
