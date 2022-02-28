@@ -47,7 +47,7 @@ public class ProductMapper {
         return productDTOs;
     }
 
-    public List<Product> products(List<ProductDTO> productDTOs) {
+    public List<Product> toProducts(List<ProductDTO> productDTOs) {
         List<Product> products = new ArrayList<>();
         for (ProductDTO productDTO : productDTOs) {
             products.add(

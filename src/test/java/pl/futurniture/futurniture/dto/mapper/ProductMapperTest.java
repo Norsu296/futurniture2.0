@@ -105,7 +105,7 @@ class ProductMapperTest {
                 )
         );
         //when
-        List<Product> products = productMapper.products(productDTOS);
+        List<Product> products = productMapper.toProducts(productDTOS);
         //then
         assertNotNull(products);
         assertEquals(2, products.size());
