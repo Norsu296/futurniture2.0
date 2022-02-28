@@ -44,4 +44,9 @@ public class ProductServiceImpl implements ProductService {
                     return productRepository.save(productFromDb);
                 }).orElseThrow(() -> new NotFoundException(ErrorMessage.NOT_FOUND));
     }
+
+    @Override
+    public Product create(Product product) {
+        return productRepository.save(product);
+    }
 }

@@ -14,6 +14,8 @@ public interface ProductService {
 
     Product edit(Long id, Product product);
 
+    Product create(Product product);
+
 
 
 }
