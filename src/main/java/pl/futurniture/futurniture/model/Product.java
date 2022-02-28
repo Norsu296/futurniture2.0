@@ -1,12 +1,17 @@
 package pl.futurniture.futurniture.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.*;
 
-@Data
 @Entity
+@Builder
+@AllArgsConstructor
+@Data
+@Table(name = "products")
 public class Product {
 
     @Id
@@ -18,4 +23,7 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    public Product() {
+
+    }
 }
